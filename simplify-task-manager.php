@@ -1,0 +1,32 @@
+<?php
+/**
+ * Plugin Name:       Simplify Task Manager
+ * Plugin URI:        https://samuel-turay.sblik.com
+ * Description:       A custom plugin to manage internship tasks and customize the sandbox admin.
+ * Version:           1.0.0
+ * Author:            Samuel Turay
+ * Author URI:        https://samuel-turay.sblik.com
+ * License:           GPL v2 or later
+ * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+ * Text Domain:       simplify-task-manager
+ * Domain Path:       /languages
+ *
+ * @package Simplify Task Manager
+ */
+
+// If this file is called directly, abort.
+if (!defined('WPINC')) {
+    die;
+}
+
+/**
+ * A global constant for the plugin's main file.
+ * This makes it easier to reference from other files
+ */
+const STM_PLUGIN_FILE = __FILE__;
+
+/**
+ * Loading the plugin's features.
+ * Adding a "require_once" line for every new feature I build
+ */
+require_once plugin_dir_path(STM_PLUGIN_FILE) . 'includes/admin-login-mods.php';
