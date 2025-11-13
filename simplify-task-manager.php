@@ -29,4 +29,7 @@ const STM_PLUGIN_FILE = __FILE__;
  * Loading the plugin's features.
  * Adding a "require_once" line for every new feature I build
  */
+// Load Admin Login Customization.
 require_once plugin_dir_path(STM_PLUGIN_FILE) . 'includes/admin-login-mods.php';
+// Load the Gravity Forms Webhook integration.
+require_once plugin_dir_path(STM_PLUGIN_FILE) . 'includes/gravity-forms-webhook.php';
