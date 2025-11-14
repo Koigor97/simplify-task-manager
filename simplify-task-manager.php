@@ -33,3 +33,7 @@ const STM_PLUGIN_FILE = __FILE__;
 require_once plugin_dir_path(STM_PLUGIN_FILE) . 'includes/admin-login-mods.php';
 // Load the Gravity Forms Webhook integration.
 require_once plugin_dir_path(STM_PLUGIN_FILE) . 'includes/gravity-forms-webhook.php';
+// Load the Task Manager menu and Kanban board page.
+require_once plugin_dir_path(STM_PLUGIN_FILE) . 'includes/admin-menu.php';
+// Load the custom "Task" post type and "Status" taxonomy.
+require_once plugin_dir_path(STM_PLUGIN_FILE) . 'includes/post-type-task.php';
