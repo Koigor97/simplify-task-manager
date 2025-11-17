@@ -53,7 +53,7 @@ function stm_login_custom_message():string {
     return '
         <div class="stm-login-header">
             <h2 class="stm-login-title">Interns Sign In</h2>
-            <p class="stm-login-subtitle">Access your internship WordPress Sandbox.</p>
+            <p class="stm-login-subtitle">Access your Internship WordPress Sandbox.</p>
 	    </div>
 	';
 }
