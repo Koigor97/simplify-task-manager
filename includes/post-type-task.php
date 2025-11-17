@@ -28,11 +28,15 @@ function stm_register_task_cpt_and_taxonomy():void {
 
     $taxonomy_args = array(
         'labels' => $taxonomy_labels,
-        'public' => true,
+        'public' => false,
+        'publicly_queryable' => false,
         'show_ui' => true,
-        'show_in_menu' => true,
+        'show_in_menu' => false,
         'hierarchical' => true,
         'show_in_rest' => true,
+        'show_admin_column' => true,
+        'query_var' => false,
+        'rewrite' => false,
     );
     // Registers the "Status" taxonomy and links it to the "Task" CPT.
     register_taxonomy('stm_task_status', array('stm_task'), $taxonomy_args);
@@ -51,7 +55,8 @@ function stm_register_task_cpt_and_taxonomy():void {
 
     $cpt_args = array(
         'labels' => $cpt_labels,
-        'public' => true,
+        'public' => false,
+        'publicly_queryable' => false,
         'has_archive' => false,
         'show_ui' => true,
         'show_in_menu' => false,
@@ -60,7 +65,10 @@ function stm_register_task_cpt_and_taxonomy():void {
         'menu_position' => 21,
         'menu_icon' => 'dashicons-pressthis',
         'show_in_rest' => true,
+        'exclude_from_search' => true,
         'taxonomies' => array('stm_task_status'),
+        'rewrite' => false,
+        'query_var' => false,
     );
     // Officially registers the "Task" post type.
     register_post_type('stm_task', $cpt_args);
