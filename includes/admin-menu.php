@@ -54,14 +54,14 @@ function stm_add_admin_menu_page():void {
 
     );
 
-    // Submenu 4: Add a Task Status menu
-    add_submenu_page(
-            'stm-task-manager',
-            'Task Statuses',
-            'Task Statuses',
-            'manage_options',
-            'edit.php?taxonomy=stm_task_status&post_type=stm_task',
-    );
+//    // Submenu 4: Add a Task Status menu
+//    add_submenu_page(
+//            'stm-task-manager',
+//            'Task Statuses',
+//            'Task Statuses',
+//            'manage_options',
+//            'edit.php?taxonomy=stm_task_status&post_type=stm_task',
+//    );
 
 
     // Submenu 3: Settings page.
