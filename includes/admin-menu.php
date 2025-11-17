@@ -54,6 +54,15 @@ function stm_add_admin_menu_page():void {
 
     );
 
+    // Submenu 4: Add a "Task Status" page.
+    add_submenu_page(
+            'stm-task-manager',
+            'Task Statuses',
+            'Task Statuses',
+            'manage_options',
+            'edit.php?taxonomy=stm_task_status&post_type=stm_task',
+    );
+
     // Submenu 3: Settings page.
     add_submenu_page(
         'stm-task-manager',
@@ -72,22 +81,10 @@ add_action('admin_menu', 'stm_add_admin_menu_page');
 /**
  * The "Callback Function" that builds the HTML for the Task Manager Page.
  *
- * This function is called by `add_menu_page()` when a user clicks on the
- * menu link.
+ * This function acts as a simple loader for the "view" file.
  */
-function stm_render_kanban_page() {
-    // The HTML for the Kanban board here.
-    ?>
-    <div>
-        <h1>My Internship Tasks</h1>
-        <p>This is the main page for the Simplify Task Manager. The Kanban board will go here</p>
-
-        <!-- The Kanban board container -->
-        <div id="kanban-board-wrapper">
-            <p>...Loading Kanban Board...</p>
-        </div>
-    </div>
-    <?php
+function stm_render_kanban_page():void {
+    require_once plugin_dir_path(STM_PLUGIN_FILE) . 'includes/views/kanban-board-page.php';
 }
 
 
